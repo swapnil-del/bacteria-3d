@@ -2,32 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Bacterial Cell Structure</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        /* This removes all default spacing and forces the page to 100% height */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body, html {
-            width: 100%;
-            height: 100%;
-            overflow: hidden; /* Stops the page from bouncing or scrolling */
-            background-color: #000; /* Makes the background dark while loading */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body, html { 
+            width: 100%; 
+            height: 100%; 
+            overflow: hidden; 
+            background-color: #f0f0f0; 
         }
 
         .sketchfab-embed-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            height: 100vh; /* Forces wrapper to fill 100% of the screen height */
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         iframe {
+            /* We force the iframe to be slightly LARGER than the container 
+               to zoom in on the bacteria model */
             width: 100% !important;
-            height: 100% !important;
+            height: 120% !important; 
             border: none;
+            /* This shift helps center the bacteria if it's sitting too low */
+            margin-top: -5%; 
         }
     </style>
 </head>
@@ -36,10 +40,8 @@
 <div class="sketchfab-embed-wrapper"> 
     <iframe title="Bacterial cell structure" 
             allowfullscreen 
-            mozallowfullscreen="true" 
-            webkitallowfullscreen="true" 
             allow="autoplay; fullscreen; xr-spatial-tracking" 
-            src="https://sketchfab.com/models/42439edc90cd4d87b8ae322a4dcee8de/embed?autostart=1&internal=1"> 
+            src="https://sketchfab.com/models/42439edc90cd4d87b8ae322a4dcee8de/embed?autostart=1&internal=1&ui_infos=0&ui_watermark=0"> 
     </iframe> 
 </div>
 
